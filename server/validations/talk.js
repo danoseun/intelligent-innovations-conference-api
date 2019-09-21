@@ -9,12 +9,11 @@ import  { talks }  from '../database';
   */
 
 export const addTalkValidation = (req, res, next) => {
-    let { title, abstract, room, speaker_firstname, speaker_lastname, speaker_email, speaker_company, speaker_bio } = req.body;
+    let { title, abstract, speaker_firstname, speaker_lastname, speaker_email, speaker_company, speaker_bio } = req.body;
 
     const rules = {
         title: 'required|string',
         abstract: 'required|string',
-        room: 'required|integer',
         speaker_firstname: 'required|min:2|alpha',
         speaker_lastname: 'required|min:2|alpha',
         speaker_email: 'required|email',
@@ -40,7 +39,6 @@ export const addTalkValidation = (req, res, next) => {
     }
     req.body.title = title;
     req.body.abstract = abstract;
-    req.body.room = room;
     req.body.speaker_firstname = speaker_firstname;
     req.body.speaker_lastname = speaker_lastname;
     req.body.speaker_email = speaker_email;

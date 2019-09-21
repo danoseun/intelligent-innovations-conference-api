@@ -1,4 +1,5 @@
 import { talks, attendees } from '../database';
+import { randomIntegerGenerator } from '../validations';
 
 /**
      * Add a new talk
@@ -14,7 +15,7 @@ export const addTalk = (req, res) =>  {
         id: talks.length + 1,
         title: req.body.title,
         abstract: req.body.abstract,
-        room: req.body.room,
+        room: randomIntegerGenerator(1, 10),
         speaker_firstname: req.body.speaker_firstname,
         speaker_lastname: req.body.speaker_lastname,
         speaker_email: req.body.speaker_email,

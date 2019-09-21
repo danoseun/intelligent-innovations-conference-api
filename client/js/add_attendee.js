@@ -1,5 +1,5 @@
-// const baseURL = 'https://conference-talk-api.herokuapp.com/';
-const baseURL = 'http://localhost:2500';
+const baseURL = 'https://conference-talk-api.herokuapp.com';
+// const baseURL = 'http://localhost:2500';
 
 const addAttendee = async (event) => {
   event.preventDefault();

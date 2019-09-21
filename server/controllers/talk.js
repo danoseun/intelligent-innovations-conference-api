@@ -9,7 +9,7 @@ import { talks, attendees } from '../database';
      * @return {object} JSON object representing success message
 */
 
-export const addTalk = (req, res) => {
+export const addTalk = (req, res) =>  {
     const newTalk = {
         id: talks.length + 1,
         title: req.body.title,
